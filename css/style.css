@@ -96,7 +96,7 @@ body{
     background-color: #FFF;
     max-width:285px;
 }
-.lineThrough{
+.linethrough{
     text-decoration: line-through;
     color : #ccc;
 }

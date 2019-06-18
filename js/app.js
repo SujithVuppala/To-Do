@@ -12,7 +12,7 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "linethrough";
 
 //Variables
-let LIST, id;
+let LIST=[], id=0;
 
 //get item from localstorage
 let data = localStorage.getItem("TODO");
@@ -60,7 +60,7 @@ function addToDo(toDo, id, done,trash){
     
     const item = `<li class="item">   
                     <i class="fa ${DONE} co" job="complete" id="${id}"></i>
-                    <p class="text ">${toDo}</p>
+                    <p class="text ${LINE} ">${toDo}</p>
                     <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
                   </li>
                 `;
@@ -114,7 +114,7 @@ function removeToDo(element){
 //target the items created dynamically    
 
 list.addEventListener("click", function(event){
-    const element = event.target;
+    const element = event.target;//return the clicked element inside the list
     const elementJob = element.attributes.job.value;
     
     if(elementJob == "complete"){
