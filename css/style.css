@@ -98,7 +98,7 @@ body{
 }
 .linethrough{
     text-decoration: line-through;
-    color : #ccc;
+    color : rgb(209, 58, 58);
 }
 .item i.de{
     position: absolute;
