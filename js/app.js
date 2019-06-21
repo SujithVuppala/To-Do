@@ -41,7 +41,7 @@ clear.addEventListener("click", function(){
     location.reload();
 });
 
-//show Today's date
+//show Today's date 
 const options = {weekday : "long", month :"short", day:"numeric"};
 const today = new Date();
 
