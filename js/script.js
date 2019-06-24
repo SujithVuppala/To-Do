@@ -13,8 +13,8 @@ const ul = document.getElementById("authors");
 
 const url = 'https://randomuser.me/api/?results=10';
 
-fetch(url)
-.then((resp) => resp.json())
+fetch(url)    //.then((resp) => resp.json())
+.then((fromResolve) => fromResolve.json())
 .then(function(data){
     let authors = data.results;
 
@@ -25,8 +25,9 @@ fetch(url)
         
         img.src =author.picture.medium;
         
-        span.innerHTML= `${author.name.first}
+        span.innerHTML= ` <br\> ${author.name.first} 
                         ${author.name.last}`;
+        
         
         append(li,img);
         append(li,span);
@@ -36,6 +37,8 @@ fetch(url)
 
 })
 
-.catch(function(error){
-    console.log(JSON.stringify(error));
+//.catch(function(error){
+.catch(function(fromReject){
+    //console.log(JSON.stringify(error));
+    sconsole.log(JSON.stringify(fromReject));
 })

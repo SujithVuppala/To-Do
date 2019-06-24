@@ -1,0 +1,21 @@
+<script>
+let promiseToCleanTheRoom = new Promise(function(resolve, reject){
+    
+    let isClean = true; //false
+    
+    if(isClean){
+        resolve('clean');
+    } else{
+        reject('not clean');
+    }
+        
+    
+});
+           promiseToCleanTheRoom //.then((fromResolve) => fromResolve.json())
+                                .then(function(data){
+                                 console.log('the room is ' + data);
+           }).catch(function(fromReject){
+                                       console.log('the room is ' + fromReject);
+           })
+          
+</script>
